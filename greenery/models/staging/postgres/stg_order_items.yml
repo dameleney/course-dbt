@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_order_items
+    description: table of items that can be or have been ordered
+    columns:
+      - name: quantity
+      - name: order_id
+        tests: 
+          - not_null
+          - unique
+      - name: product_id

@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+
+  - name: postgres_src # name of the source 
+    schema: public # this is the schema our raw data lives in
+    database: dbt # this is the name of our database
+
+    quoting:
+      database: false
+      schema: false
+      identifier: false
+
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+
+    tables:
+      - name: superheroes 
+        loaded_at_field: created_at
+        description: >
+          Contains demographic information about each superhero
+      - name: orders
+      - name: addresses
+      - name: users
+      - name: events
+      - name: order_items
+      - name: products
+      - name: promos

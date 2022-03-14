@@ -1,0 +1,24 @@
+version: 2
+
+models: 
+  - name: stg_orders
+    description: Orders made by users
+    columns:
+    - name: order_id
+      description: UUID for orders
+      tests:
+        - not_null
+        - unique
+    - name: user_id
+      description: user id for order
+    - name: promo_id
+    - name: address_id
+    - name: created_at
+    - name: order_cost
+    - name: shipping_cost
+    - name: order_total
+    - name: tracking_id
+    - name: shipping_service
+    - name: estimated_delivery_at
+    - name: delivered_at
+    - name: status

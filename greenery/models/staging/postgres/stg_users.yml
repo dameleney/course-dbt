@@ -1,0 +1,18 @@
+version: 2
+
+models:
+- name: stg_users
+  description: Users and information about users
+  columns:
+    - name: user_id
+      description: UUID for each unique user
+      tests: 
+        - not_null
+        - unique
+    - name: first_name
+    - name: last_name
+    - name: email
+    - name: phone_number
+    - name: created_at
+    - name: updated_at
+    - name: address_id

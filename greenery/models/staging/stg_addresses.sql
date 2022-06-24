@@ -6,9 +6,9 @@
 }}
 
 SELECT  
-    address_id AS address_uuid,
+    address_id,
     address,
     zipcode,
     state,
     country
-FROM {{ source('postgres_src', 'addresses') }}
+FROM {{ source('src_postgres', 'addresses') }}

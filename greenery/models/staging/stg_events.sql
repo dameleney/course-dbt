@@ -12,4 +12,4 @@ SELECT
     event_type,
     order_id,
     product_id
-FROM {{ source('postgres_src','events') }}
+FROM {{ source('src_postgres','events') }}

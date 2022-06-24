@@ -5,7 +5,7 @@
 }}
 
 SELECT 
-    quantity,
     order_id,
-    product_id
-FROM {{ source('postgres_src', 'order_items') }}
+    product_id,
+    quantity
+FROM {{ source('src_postgres', 'order_items') }}

@@ -3,4 +3,4 @@ SELECT
     inventory,
     product_id,
     name
-FROM {{ source('postgres_src','products')}}
+FROM {{ source('src_postgres','products')}}
